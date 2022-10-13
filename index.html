@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <base target="_top">
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+ 
+<style>
+ 
+   .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+ 
+</style>  
+ 
+</head>
+ 
+<body class="bg-light">
+  <div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="https://sekolahanaksaleh.sch.id/wp-content/uploads/2020/10/logo-anaksaleh.png" alt="" width="100" height="auto">
+      <h2>FORMULIR PENDAFTARAN SISWA BARU SD ANAK SALEH</h2>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary">Perhatian!</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Silahkan Upload Bukti Transfer dengan Format Gambar.</h6>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Pastikan terlihat jelas Tanggal / Jam Transfer serta Nominal Transfer.</h6>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Beri catatan keterangan nama anak saat melakukan proses transfer.</h6>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-success">
+              <h6 class="my-0">No. Rekening PENDIDIKAN ANAK SALEH</h6>
+              <strong>488-788-787 (BNI)</strong>
+            </div>
+          </li>
+        </ul>
+
+        <form class="card p-2">
+          <div class="input-group">
+            <input type="text" class="form-control" id="gelombang" value="Gelombang 2" readonly>
+            <a href="https://wa.me/+6285100090165" class="btn btn-secondary" target="_blank">Contact Person</a>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Sekolah Asal</h4>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="input1" class="form-label">NISN</label>
+              <input type="number" class="form-control" id="input1" placeholder="" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="input2" class="form-label">Sekolah TK Asal</label>
+              <input type="text" class="form-control" id="input2" list="asal" placeholder="" required>
+              <datalist id="asal">
+                <option>TK / PAUD Anak Saleh</option>
+              </datalist>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="input3" class="form-label">Alamat Sekolah TK Asal</label>
+              <textarea class="form-control" id="input3" placeholder="" required></textarea>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="inputstatus" class="form-label">Apakah Calon Siswa Berkebutuhan Khusus?</label>
+              <select class="form-select" id="inputstatus" required>
+                <option >Pilih...</option>
+                <option value="ABK">Ya</option>
+                <option value="Reguler">Tidak</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+
+            <hr class="my-4">
+
+            <h4 class="mb-3">Biodata Calon Siswa</h4>
+            <div class="col-sm-4">
+              <label for="input4" class="form-label">Email</label>
+              <input type="email" class="form-control" id="input4" placeholder="your@mail.com" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <label for="input5" class="form-label">NIK</label>
+              <input type="number" class="form-control" id="input5" placeholder="" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <label for="input6" class="form-label">No. KK</label>
+              <input type="number" class="form-control" id="input6" placeholder="" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="input7" class="form-label">Nama Lengkap</label>
+              <input type="text" class="form-control" id="input7" placeholder="" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <label for="input8" class="form-label">Nama Panggilan</label>
+              <input type="text" class="form-control" id="input8" placeholder="" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <label for="input9" class="form-label">Jenis Kelamin</label>
+              <select class="form-select" id="input9" required>
+                <option >Pilih...</option>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <label for="input10" class="form-label">Tempat Lahir</label>
+              <input type="text" class="form-control" id="input10" placeholder="" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+
+            <div class="col-sm-4">
+              <label for="input11" class="form-label">Tanggal Lahir</label>
+              <input type="date" max="2017-07-20" class="form-control" id="input11" placeholder="dd-mm-yyyy" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+
+            <div class="col-sm-6">
+              <label for="input12" class="form-label">Alamat Rumah</label>
+              <textarea class="form-control" id="input12" placeholder="" required></textarea>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-sm-2">
+              <label for="input13" class="form-label">No. Rumah</label>
+              <input type="text" class="form-control" id="input13" placeholder="" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-sm-2">
+              <label for="input14" class="form-label">RT</label>
+              <input type="number" class="form-control" id="input14" placeholder="" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-sm-2">
+              <label for="input15" class="form-label">RW</label>
+              <input type="number" class="form-control" id="input15" placeholder="" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <label for="input16" class="form-label">Kelurahan</label>
+              <input type="text" class="form-control" id="input16" placeholder="" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <label for="input17" class="form-label">Kecamatan</label>
+              <input type="text" class="form-control" id="input17" placeholder="" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <label for="input18" class="form-label">Kota / Kabupaten</label>
+              <input type="text" class="form-control" id="input18" placeholder="" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <label for="inputkodepos" class="form-label">Kode Pos</label>
+              <input type="number" class="form-control" id="inputkodepos" placeholder="" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <label for="input19" class="form-label">No. Telp Rumah</label>
+              <input type="number" class="form-control" id="input19" placeholder="" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <label for="input20" class="form-label">No. Handphone Ayah</label>
+              <input type="number" class="form-control" id="input20" placeholder="" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <label for="input21" class="form-label">No. Handphone Ibu</label>
+              <input type="number" class="form-control" id="input21" placeholder="" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <label for="input22" class="form-label">Anak ke</label>
+              <input type="number" class="form-control" id="input22" placeholder="" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <label for="input23" class="form-label">Jumlah Saudara</label>
+              <input type="number" class="form-control" id="input23" placeholder="" required>
+              <div class="invalid-feedback">
+                Valid is required.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="input24" class="form-label">Agama</label>
+              <select class="form-select" id="input24" required>
+                <option >Pilih...</option>
+                <option value="Islam">Islam</option>
+                <option value="Kristen">Kristen</option>
+                <option value="Protestan">Protestan</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Budha">Budha</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="input25" class="form-label">Warga Negara</label>
+              <select class="form-select" id="input25" required>
+                <option >Pilih...</option>
+                <option value="WNI">Warga Negara Indonesia</option>
+                <option value="WNA">Warga Negara Asing</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="input26" class="form-label">Suku Bangsa</label>
+              <select class="form-select" id="input26" required>
+                <option >Pilih...</option>
+                <option value="Suku Jawa">SUKU JAWA</option>
+                <option value="Suku Sunda">SUKU SUNDA</option>
+                <option value="Suku Batak">SUKU BATAK</option>
+                <option value="Suku Betawi">SUKU BETAWI</option>
+                <option value="Suku Dayak">SUKU DAYAK</option>
+                <option value="Suku Asmat">SUKU ASMAT</option>
+                <option value="Suku Bugis">SUKU BUGIS</option>
+                <option value="Suku Madura">SUKU MADURA</option>
+                <option value="Suku Minang">SUKU MINANG</option>
+                <option value="Suku Baduy">SUKU BADUY</option>
+                <option value="Suku Bali">SUKU BALI</option>
+                <option value="Suku Ambon">SUKU AMBON</option>
+                <option value="Suku Gayo">SUKU GAYO</option>
+                <option value="Suku Tengger">SUKU TANGGER</option>
+                <option value="Suku Sasak">SUKU SASAK</option>
+                <option value="Suku Sumbawa">SUKU SUMBAWA</option>
+                <option value="Suku Flores">SUKU FLORES</option>
+                <option value="Suku Toraja">SUKU TORAJA</option>
+                <option value="Suku Osing">SUKU OSING</option>
+                <option value="Suku Baduy">SUKU BADUY</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+
+            <hr class="my-4">
+            
+            <h4 class="mb-3">Upload Dokumentasi</h4>
+            <div class="col-sm-8">
+              <label for="lastName" class="form-label">Upload Bukti Pembayaran Formulir Pendaftaran</label>
+              <input class="form-control-file form-control" type="file" id="myFile" name="myFile" required>
+              <img class="form-control-file mt-4" style="max-width: 60px; margin: 40px auto; display: none; border: 0px solid #555;" src="" id="img" alt="from phone">
+            </div>
+
+            <div class="col-sm-8">
+              <label for="lastName" class="form-label">Upload scan/foto Kartu Keluarga (KK)</label>
+              <input class="form-control-file form-control" type="file" id="myFile2" name="myFile" required>
+              <img class="form-control-file mt-4" style="max-width: 60px; margin: 40px auto; display: none; border: 0px solid #555;" src="" id="img2" alt="from phone">
+            </div>
+
+            <div class="col-sm-8">
+              <label for="lastName" class="form-label">Upload scan/foto Akta Kelahiran</label>
+              <input class="form-control-file form-control" type="file" id="myFile3" name="myFile" required>
+              <img class="form-control-file mt-4" style="max-width: 60px; margin: 40px auto; display: none; border: 0px solid #555;" src="" id="img3" alt="from phone">
+            </div>
+
+            <div class="col-sm-8">
+              <label for="lastName" class="form-label">Upload Scan / Foto Surat Keterangan Peserta Didik dari TK Asal</label>
+              <input class="form-control-file form-control" type="file" id="myFile4" name="myFile" required>
+              <img class="form-control-file mt-4" style="max-width: 60px; margin: 40px auto; display: none; border: 0px solid #555;" src="" id="img4" alt="from phone">
+            </div>
+            
+            <div class="col-sm-8">
+              <label for="lastName" class="form-label">Upload pasfoto berukuran 3×4 berwarna (Berhijab bagi ananda putri)</label>
+              <input class="form-control-file form-control" type="file" id="myFile5" name="myFile" required>
+              <img class="form-control-file mt-4" style="max-width: 60px; margin: 40px auto; display: none; border: 0px solid #555;" src="" id="img5" alt="from phone">
+            </div>
+
+            <div class="col-sm-8">
+              <label for="lastName" class="form-label">Upload scan/foto piagam kejuaraan (jika ada)</label>
+              <input class="form-control-file form-control" type="file" id="myFile6" name="myFile">
+              <img class="form-control-file mt-4" style="max-width: 60px; margin: 40px auto; display: none; border: 0px solid #555;" src="" id="img6" alt="from phone">
+            </div>
+
+            <div class="col-sm-8">
+              <label for="lastName" class="form-label">Upload scan/foto Surat Hasil Assessment dari Psikolog (khusus Peserta Didik Berkebutuhan Khusus)</label>
+              <input class="form-control-file form-control" type="file" id="myFile7" name="myFile">
+              <img class="form-control-file mt-4" style="max-width: 60px; margin: 40px auto; display: none; border: 0px solid #555;" src="" id="img7" alt="from phone">
+            </div>
+
+          </div>
+
+          <hr class="my-4">
+
+          <button type="button" id="submitButton" class="w-100 btn-lg btn btn-primary bttn">KIRIM</button>
+      
+      </div>
+    </div>
+  </main>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2022 Operator SD Anak Saleh</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer>
+
+</div>
+   
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+<script>
+
+    let uploadFile ={}
+    $('input[type="file"]').on('change',function(){
+      let files = []
+      for(var i=0; i<$(this)[0].files.length; i++){
+         files.push($(this)[0].files[i])
+      }
+      files.forEach((file,i)=>{
+        let reader = new FileReader()
+        reader.onloadend = (e)=>{
+          uploadFile[$(this).attr('id')+(i+1)]={
+            data:e.target.result.split(',')[1],
+            name:file.name,
+            type:file.type
+          }
+        }
+        reader.readAsDataURL(file)
+       })
+       })  
+ 
+  document.addEventListener('DOMContentLoaded', (ev) =>{
+
+    showFileIcon('myFile','img')
+    showFileIcon('myFile2','img2')
+    showFileIcon('myFile3','img3')
+    showFileIcon('myFile4','img4')
+    showFileIcon('myFile5','img5')
+    showFileIcon('myFile6','img6')
+    showFileIcon('myFile7','img7')
+
+  });
+
+  function showFileIcon(fileID, imgID){
+    let input = document.getElementById(fileID);
+    input.addEventListener('change', (ev) =>{
+      console.dir( input.files[0] );
+      let img = document.getElementById(imgID);
+      img.style.display = "block";
+      img.src = input.files[0].type.indexOf("image/") > -1? window.URL.createObjectURL(input.files[0]):
+                input.files[0].type.indexOf("/pdf") > -1? "http://uapminovasi.com/wp-content/uploads/2018/09/pdf-logo-15.jpg":
+                input.files[0].type.indexOf(".sheet") > -1? "https://gadoin.com/wp-content/uploads/2021/05/excel-logo-0.jpg":
+                input.files[0].type.indexOf(".document") > -1?
+                "https://logos-world.net/wp-content/uploads/2020/03/Microsoft-Word-Logo-2013-2019.png":
+                "https://iconape.com/wp-content/png_logo_vector/document.png";
+    })
+  };
+
+
+  document.querySelector(".bttn").addEventListener("click", submitData);
+
+  function submitData(){
+    var input1 = document.getElementById("input1");
+    var input2 = document.getElementById("input2");
+    var input3 = document.getElementById("input3");
+    var input4 = document.getElementById("input4");
+    var input5 = document.getElementById("input5");
+    var input6 = document.getElementById("input6");
+    var input7 = document.getElementById("input7");
+    var input8 = document.getElementById("input8");
+    var input9 = document.getElementById("input9");
+    var input10 = document.getElementById("input10");
+    var input11 = document.getElementById("input11");
+    var input12 = document.getElementById("input12");
+    var input13 = document.getElementById("input13");
+    var input14 = document.getElementById("input14");
+    var input15 = document.getElementById("input15");
+    var input16 = document.getElementById("input16");
+    var input17 = document.getElementById("input17");
+    var input18 = document.getElementById("input18");
+    var input19 = document.getElementById("input19");
+    var input20 = document.getElementById("input20");
+    var input21 = document.getElementById("input21");
+    var input22 = document.getElementById("input22");
+    var input23 = document.getElementById("input23");
+    var input24 = document.getElementById("input24");
+    var input25 = document.getElementById("input25");
+    var input26 = document.getElementById("input26");
+    var inputkodepos = document.getElementById("inputkodepos");
+    var inputstatus = document.getElementById("inputstatus");
+    var gelombang = document.getElementById("gelombang");
+    let upload1 = document.getElementById('myFile');
+    let upload2 = document.getElementById('myFile2');
+    let upload3 = document.getElementById('myFile3');
+    let upload4 = document.getElementById('myFile4');
+    let upload5 = document.getElementById('myFile5');
+    let upload6 = document.getElementById('myFile6');
+    let upload7 = document.getElementById('myFile7');
+    let img = document.getElementById('img');
+    let img2 = document.getElementById('img2');
+    let img3 = document.getElementById('img3');
+    let img4 = document.getElementById('img4');
+    let img5 = document.getElementById('img5');
+    let img6 = document.getElementById('img6');
+    let img7 = document.getElementById('img7');
+    let button = document.getElementById('submitButton');
+
+    let obj = {
+      input1: input1.value,
+      input2: input2.value,
+      input3: input3.value,
+      input4: input4.value,
+      input5: input5.value,
+      input6: input6.value,
+      input7: input7.value,
+      input8: input8.value,
+      input9: input9.value,
+      input10: input10.value,
+      input11: input11.value,
+      input12: input12.value,
+      input13: input13.value,
+      input14: input14.value,
+      input15: input15.value,
+      input16: input16.value,
+      input17: input17.value,
+      input18: input18.value,
+      input19: input19.value,
+      input20: input20.value,
+      input21: input21.value,
+      input22: input22.value,
+      input23: input23.value,
+      input24: input24.value,
+      input25: input25.value,
+      input26: input26.value,
+      inputkodepos: inputkodepos.value,
+      inputstatus: inputstatus.value,
+      gelombang: gelombang.value,
+      uploadFile: uploadFile
+    }
+    
+    if(
+      input1.value == "" ||
+      input2.value == "" ||
+      input3.value == "" ||
+      input4.value == "" ||
+      input5.value == "" ||
+      input6.value == "" ||
+      input7.value == "" ||
+      input8.value == "" ||
+      input9.value == "" ||
+      input10.value == "" ||
+      input11.value == "" ||
+      input12.value == "" ||
+      input13.value == "" ||
+      input14.value == "" ||
+      input15.value == "" ||
+      input16.value == "" ||
+      input17.value == "" ||
+      input18.value == "" ||
+      input19.value == "" ||
+      input20.value == "" ||
+      input21.value == "" ||
+      input22.value == "" ||
+      input23.value == "" ||
+      input24.value == "" ||
+      input25.value == "" ||
+      input26.value == "" ||
+      inputkodepos.value == "" ||
+      inputstatus.value == "" ||
+      upload1.value == "" || 
+      upload2.value == "" || 
+      upload3.value == "" ||
+      upload4.value == "" || 
+      upload5.value == "" 
+      ){
+        Swal.fire({title:"", text:'Silahkan Lengkapi Form!', icon: 'warning'})
+    }else{
+        button.innerHTML = "Proses Pengiriman Data...";
+        google.script.run
+        .withSuccessHandler(() => {
+          input1.value = "";
+          input2.value = "";
+          input3.value = "";
+          input4.value = "";
+          input5.value = "";
+          input6.value = "";
+          input7.value = "";
+          input8.value = "";
+          input9.value = "";
+          input10.value = "";
+          input11.value = "";
+          input12.value = "";
+          input13.value = "";
+          input14.value = "";
+          input15.value = "";
+          input16.value = "";
+          input17.value = "";
+          input18.value = "";
+          input19.value = "";
+          input20.value = "";
+          input21.value = "";
+          input22.value = "";
+          input23.value = "";
+          input24.value = "";
+          input25.value = "";
+          input26.value = "";
+          inputkodepos.value = "";
+          inputstatus.value = "";
+          gelombang.value = "";
+
+          upload1.value = "";
+          img.src = "";
+          img.style.display = "none";
+
+          upload2.value = "";
+          img2.src = "";
+          img2.style.display = "none";
+
+          upload3.value = "";
+          img3.src = "";
+          img3.style.display = "none";
+
+          upload4.value = "";
+          img4.src = "";
+          img4.style.display = "none";
+
+          upload5.value = "";
+          img5.src = "";
+          img5.style.display = "none";
+
+          upload6.value = "";
+          img6.src = "";
+          img6.style.display = "none";
+
+          upload7.value = "";
+          img7.src = "";
+          img7.style.display = "none";
+
+          button.innerHTML = "SUBMIT";
+          uploadFile = {};
+          Swal.fire({title:"", text:'Data Terkirim!', icon:'success', timer: 2500, showConfirmButton:false});     
+        })
+        .saveData(obj);      
+    }
+  };
+
+</script>
+ 
+</body>
+ 
+</html>
